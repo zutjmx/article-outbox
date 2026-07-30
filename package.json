@@ -1,0 +1,24 @@
+{
+  "name": "article-outbox",
+  "version": "1.0.0",
+  "description": "Companion repo for 'How to Fix the Dual-Write Problem in Node.js with the Outbox Pattern'",
+  "type": "module",
+  "scripts": {
+    "floci:start": "docker run -d --name floci -p 4566:4566 -p 7001-7099:7001-7099 -v //var/run/docker.sock:/var/run/docker.sock floci/floci:latest",
+    "floci:stop": "docker stop floci && docker rm floci",
+    "check": "node scripts/check.js",
+    "setup": "node scripts/setup.js",
+    "migrate": "node src/migrate.js",
+    "server": "node src/server.js",
+    "relay": "node src/relay.js",
+    "consumer": "node src/consumer.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-rds": "^3.0.0",
+    "@aws-sdk/client-sqs": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^5.0.0",
+    "pg": "^8.0.0"
+  }
+}
