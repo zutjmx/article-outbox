@@ -1,6 +1,6 @@
 # article-outbox
 
-Companion repo for [How to Fix the Dual-Write Problem in Node.js with the Outbox Pattern](https://www.freecodecamp.org/news/...).
+Companion repo for How to Fix the Dual-Write Problem in Node.js with the Outbox Pattern.
 
 Demonstrates the transactional outbox pattern using:
 
@@ -12,7 +12,6 @@ Demonstrates the transactional outbox pattern using:
 
 - Node.js 20+
 - Docker
-- AWS CLI — for verifying results (`brew install awscli` or see [AWS docs](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html))
 
 ## Getting started
 
@@ -72,7 +71,7 @@ curl -X POST http://localhost:3000/orders \
 ### 7. Verify the fulfillment record
 
 ```bash
-aws dynamodb scan --table-name fulfillments
+npm run check
 ```
 
 ## Going to production
