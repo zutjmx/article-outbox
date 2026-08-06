@@ -23,6 +23,8 @@ npm install
 
 ### 2. Start floci
 
+**On Windows with Docker Desktop, you need to edit the `floci:start` script in your `package.json` to change the Docker socket mount from `/var/run/docker.sock` to `//var/run/docker.sock`**
+
 ```bash
 npm run floci:start
 ```
